@@ -17,18 +17,23 @@
       </div>
     </div>
 
+/* ==================================================
+===================================================== */
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const tocToggle = document.getElementById('toc-toggle');
-    const toc = document.querySelector('.toc');
+    const toggleBtn = document.getElementById('toc-toggle');
+    const tocPanel = document.getElementById('toc-panel');
 
-    if (tocToggle && toc) {
-      tocToggle.addEventListener('click', function () {
-        toc.classList.toggle('toc-visible');
+    if (toggleBtn && tocPanel) {
+      toggleBtn.addEventListener('click', function () {
+        tocPanel.classList.toggle('toc-visible');
       });
     }
   });
 </script>
+
+/* ==================================================
+===================================================== */
 
 <div id="toc-panel" class="toc-panel">
   <!-- 你可以用 JavaScript 動態產生目錄，或手動加上連結 -->
@@ -36,7 +41,8 @@
   <a href="#section2">第二節</a>
   <a href="#section3">第三節</a>
 </div>
-
+/* ==================================================
+===================================================== */
 
   </nav>
 {% else %}
