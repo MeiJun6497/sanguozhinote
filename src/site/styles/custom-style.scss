@@ -1,26 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
 
+/* ==================================================
+                      字形與底色
+===================================================== */
 body {
-  font-family: 'Noto Serif TC', serif !important;
-  color: #6E696D !important;
-  background-color: #f7f7f7 !important;  // 設定底色，這裡是淡灰色
+  font-family: 'Noto Serif TC', serif !important;  // 一般文字字體
+  color: #6E696D !important;  // 一般文字顏色
+  background-color: #f7f7f7 !important;  // 網頁底色
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Noto Serif TC', serif !important;
-  color: #6E696D !important;
+  font-family: 'Noto Serif TC', serif !important;  // 標題字體
+  color: #6E696D !important;  // 標題顏色
 }
 
+/* ==================================================
+                     高亮文字顏色
+===================================================== */
 mark.hltr-r {
   background-color: transparent !important;
-  color: #bf616a !important;
+  color: #bf616a !important;  // 設定紅色
 }
 
 mark.hltr-g {
   background-color: transparent !important;
-  color: #679e67 !important;
+  color: #679e67 !important;  // 設定綠色
 }
 
+/* ==================================================
+                     引述框樣式
+===================================================== */
 blockquote {
   border-left: 4px solid #b0b0b0 !important;  // 灰色直條
   padding-left: 1em !important;
