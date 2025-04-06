@@ -24,6 +24,8 @@ blockquote {
   border-left: 4px solid #b0b0b0 !important;  // 灰色直條
   padding-left: 1em;
   margin-left: 0;
+  background-color: #f9f9f9;
+  border-radius: 4px;
   color: #6E696D;  // 與你前面設定的文字顏色一致
   font-style: italic;  // 可選，如果你想讓引文有點區別
 }
