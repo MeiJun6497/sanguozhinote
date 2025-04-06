@@ -16,6 +16,20 @@
         <button id="toc-toggle" class="toc-toggle-button">目錄</button>
       </div>
     </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tocToggle = document.getElementById('toc-toggle');
+    const toc = document.querySelector('.toc');
+
+    if (tocToggle && toc) {
+      tocToggle.addEventListener('click', function () {
+        toc.classList.toggle('toc-visible');
+      });
+    }
+  });
+</script>
+
   </nav>
 {% else %}
   <div class="empty-navbar">
