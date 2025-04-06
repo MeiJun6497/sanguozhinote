@@ -9,6 +9,7 @@
             {% include "components/searchButton.njk" %}
         {%endif%}
     </nav>
+    <button id="toc-toggle" class="toc-toggle-button">目錄</button>
     {%else%}
     <div class="empty-navbar" >
         {% if settings.dgEnableSearch === true%}
