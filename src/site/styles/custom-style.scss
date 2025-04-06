@@ -56,8 +56,8 @@ blockquote {
 ===================================================== */
 /* ===== 目錄按鈕樣式 ===== */
 .toc-toggle-button {
-  background-color: #c1c1c1;
-  color: #6E696D;
+  background-color: #c1c1c1 !important;
+  color: #6E696D !important;
   border: none;
   width: 60px;       // 請視你的 nav 高度做調整
   height: 60px;
@@ -68,7 +68,7 @@ blockquote {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: none;  // 移除陰影
+  box-shadow: none !important;  // 移除陰影
   transition: background-color 0.2s ease;
 }
 
