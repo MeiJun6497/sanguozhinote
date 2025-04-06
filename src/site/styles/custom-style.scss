@@ -76,34 +76,6 @@ blockquote {
   background-color: #b1b1b1;  // 淺一點的 hover 效果
 }
 
-/* ===== 漢堡圖示（三條橫線）===== */
-.hamburger-icon {
-  display: block;
-  width: 20px;
-  height: 2px;
-  background-color: #6E696D;
-  position: relative;
-}
-
-.hamburger-icon::before,
-.hamburger-icon::after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 2px;
-  background-color: #6E696D;
-  left: 0;
-}
-
-.hamburger-icon::before {
-  top: -6px;
-}
-
-.hamburger-icon::after {
-  top: 6px;
-}
-
-
 
 /* ===== 目錄面板樣式 ===== */
 .toc-panel {
