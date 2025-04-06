@@ -1,7 +1,7 @@
 body {
     /***
-      ADD YOUR CUSTOM STYLING HERE. (INSIDE THE body {...} section.)
-      IT WILL TAKE PRECEDENCE OVER THE STYLING IN THE STYLE.CSS FILE.
+  font-family: 'Noto Serif CJK TC', serif !important;
+  color: #6E696D !important;
    ***/
     //  background-color: white;
     //  .content {
@@ -10,4 +10,9 @@ body {
     //  h1 {
     //   color: black;
     //  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif CJK TC', serif !important;
+  color: #6E696D !important;
 }
