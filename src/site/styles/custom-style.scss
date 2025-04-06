@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');  // 引入思源宋體
 
 /* ==================================================
                       字形與底色
@@ -40,3 +40,15 @@ blockquote {
   font-style: normal !important;  // 斜體字樣式改為正常
 }
 
+/* ==================================================
+                     Header樣式
+===================================================== */
+header {
+  background-color: #dbdbdb !important;  // 深藍色背景
+  color: #6E696D !important;  // 白色文字
+}
+
+nav {
+  background-color: #dbdbdb !important;
+  color: #6E696D !important;
+}
