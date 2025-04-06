@@ -54,32 +54,54 @@ blockquote {
 /* ==================================================
                        目錄按鈕
 ===================================================== */
-.toc {
-  display: none;
-  position: fixed;
-  right: 0;
-  top: 60px; // 根據您的導航欄高度調整
-  width: 300px;
-  max-height: 80vh;
-  overflow-y: auto;
-  background-color: #dbdbdb;
-  border-left: 1px solid #ddd;
-  z-index: 1000;
-}
-
-.toc-visible {
-  display: block;
-}
-
+/* ===== 目錄按鈕樣式 ===== */
 .toc-toggle-button {
-  background-color: transparent;
+  background-color: #dbdbdb;
+  color: #6E696D;
   border: none;
-  color: #333;
+  padding: 6px 12px;
+  border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
-  padding: 10px;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
 }
 
 .toc-toggle-button:hover {
-  color: #000;
+  background-color: #c5c5c5;
 }
+
+/* ===== 目錄面板樣式 ===== */
+.toc-panel {
+  position: fixed;
+  top: 60px; /* 根據你的 header 高度微調 */
+  right: 20px;
+  width: 250px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background-color: #666666;
+  color: #dbdbdb;
+  border-radius: 6px;
+  padding: 1em;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 1000;
+}
+
+/* 顯示目錄 */
+.toc-visible {
+  display: block !important;
+}
+
+/* 目錄連結樣式 */
+.toc-panel a {
+  color: #dbdbdb;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 0.5em;
+  font-size: 0.9rem;
+}
+
+.toc-panel a:hover {
+  text-decoration: underline;
+}
+
