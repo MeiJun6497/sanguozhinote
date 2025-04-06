@@ -1,19 +1,27 @@
-{%if settings.dgHomeLink === true%}
-    <nav class="navbar">
-        <div class="navbar-inner">
-            <a href="/" style="text-decoration: none;">
-                <h1 style="margin: 15px !important;">{{meta.siteName}}</h1>
-            </a>
-        </div>
-        {% if settings.dgEnableSearch === true%}
-            {% include "components/searchButton.njk" %}
-        {%endif%}
-    </nav>
-    <button id="toc-toggle" class="toc-toggle-button">目錄</button>
-    {%else%}
-    <div class="empty-navbar" >
-        {% if settings.dgEnableSearch === true%}
-            {% include "components/searchButton.njk" %}
-        {%endif%}
+{% if settings.dgHomeLink === true %}
+  <nav class="navbar">
+    <div class="navbar-inner" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+      <!-- 左側：網站名稱 -->
+      <a href="/" style="text-decoration: none;">
+        <h1 style="margin: 15px !important;">{{meta.siteName}}</h1>
+      </a>
+
+      <!-- 右側：按鈕群（search + ToC） -->
+      <div class="navbar-buttons" style="display: flex; align-items: center; gap: 10px;">
+        {% if settings.dgEnableSearch === true %}
+          {% include "components/searchButton.njk" %}
+        {% endif %}
+
+        <!-- ToC 目錄按鈕 -->
+        <button id="toc-toggle" class="toc-toggle-button">目錄</button>
+      </div>
     </div>
-{%endif%}
+  </nav>
+{% else %}
+  <div class="empty-navbar">
+    {% if settings.dgEnableSearch === true %}
+      {% include "components/searchButton.njk" %}
+    {% endif %}
+  </div>
+{% endif %}
+
