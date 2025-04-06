@@ -22,11 +22,11 @@ mark.hltr-g {
 
 blockquote {
   border-left: 4px solid #b0b0b0 !important;  // 灰色直條
-  padding-left: 1em;
-  margin-left: 0;
-  background-color: #f9f9f9;
-  border-radius: 4px;
-  color: #6E696D;  // 與你前面設定的文字顏色一致
-  font-style: italic;  // 可選，如果你想讓引文有點區別
+  padding-left: 1em !important;
+  margin-left: 0 !important;
+  color: #6E696D !important;  // 文字顏色
+  background-color: #f9f9f9 !important;  // 背景顏色
+  border-radius: 4px !important;  // 圓角邊框
+  font-style: normal !important;  // 斜體字樣式改為正常
 }
 
