@@ -50,3 +50,37 @@ blockquote {
    height: auto !important;               // 自動高度（根據內容）
    font-size: 0.5rem !important;          // 縮小文字大小
  }
+
+/* ==================================================
+                       目錄按鈕
+===================================================== */
+.toc {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 60px; // 根據您的導航欄高度調整
+  width: 300px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background-color: #fff;
+  border-left: 1px solid #ddd;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.toc-visible {
+  display: block;
+}
+
+.toc-toggle-button {
+  background-color: transparent;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.toc-toggle-button:hover {
+  color: #000;
+}
