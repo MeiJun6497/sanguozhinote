@@ -47,7 +47,7 @@ blockquote {
    background-color: #dbdbdb !important;
    color: #6E696D !important;
    padding: 0.2rem 0.2rem !important;       // 調小上下、左右的內距
-   height: 40px !important;               // 自動高度（根據內容）
+   height: 60px !important;               // 自動高度（根據內容）
    font-size: 0.5rem !important;          // 縮小文字大小
  }
 
@@ -59,8 +59,8 @@ blockquote {
   background-color: #c1c1c1;
   color: #6E696D;
   border: none;
-  width: 40px;       // 這裡的 40px 請視你的 nav 高度做調整
-  height: 40px;
+  width: 60px;       // 請視你的 nav 高度做調整
+  height: 60px;
   border-radius: 0;  // 去除圓角
   cursor: pointer;
   font-size: 0.9rem;
