@@ -58,9 +58,9 @@ blockquote {
 .toc-toggle-button {
   background-color: #dbdbdb !important;  // 淺灰色底
   color: #6E696D !important;             // 深灰色字
-  border: #6E696D !important;              // 無邊框
+  border: 1px !important;              // 無邊框
   padding: 15px 15px !important;
-  border-radius: 0 !important;          // 移除圓角
+  border-radius: 1px !important;          // 移除圓角
   cursor: pointer !important;
   font-size: 0.9rem !important;
   box-shadow: none !important;          // 移除陰影
