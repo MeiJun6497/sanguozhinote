@@ -31,8 +31,8 @@ mark.hltr-g {
                    文字反白樣式
 ===================================================== */
 ::selection {
-  background-color: #c1c1c1;  // 你想要的選取底色（淺灰）
-  color: #6E696D;             // 選取時的文字顏色（深灰）
+  background-color: #c1c1c1 !important;  // 你想要的選取底色（淺灰）
+  color: #6E696D !important;             // 選取時的文字顏色（深灰）
 }
 
 
