@@ -30,10 +30,11 @@ mark.hltr-g {
 /* ==================================================
                    文字反白樣式
 ===================================================== */
-body::selection {
+*::selection {
   background-color: #c1c1c1 !important;
   color: #6E696D !important;
 }
+
 
 
 
