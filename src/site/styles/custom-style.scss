@@ -14,6 +14,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #6E696D !important;  // 標題顏色
 }
 
+::selection {
+  background-color: #fff2b3;  // 淡黃色底色
+  color: #6E696D;             // 深灰文字
+}
+
+
 /* ==================================================
                      高亮文字顏色
 ===================================================== */
@@ -25,19 +31,6 @@ mark.hltr-r {
 mark.hltr-g {
   background-color: transparent !important;
   color: #679e67 !important;  // 設定綠色
-}
-
-/* ==================================================
-                   文字反白樣式
-===================================================== */
-::selection {
-  background-color: #fff2b3;
-  color: #6E696D;
-}
-
-::-moz-selection {
-  background-color: #fff2b3;
-  color: #6E696D;
 }
 
 
