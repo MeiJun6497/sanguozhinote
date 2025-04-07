@@ -132,12 +132,9 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* ===== 修改選取文字的樣式 ===== */
-.markdown-preview-view ::selection {
-  background-color: #fff2b3 !important; /* 淡黃色 */
-  color: #6E696D !important;           /* 深灰色文字 */
+body ::selection,
+body ::-moz-selection {
+  background: #fff2b3 !important; /* 淡黃色 */
+  color: #6E696D !important;      /* 深灰色文字 */
 }
 
-.markdown-preview-view ::-moz-selection {
-  background-color: #fff2b3 !important;
-  color: #6E696D !important;
-}
