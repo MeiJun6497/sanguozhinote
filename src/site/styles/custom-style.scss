@@ -130,11 +130,3 @@ h1, h2, h3, h4, h5, h6 {
   scroll-margin-top: 80px;  // 根據 header 實際高度微調
 }
 
-
-/* ===== 修改選取文字的樣式 ===== */
-body ::selection,
-body ::-moz-selection {
-  background: #fff2b3 !important; /* 淡黃色 */
-  color: #6E696D !important;      /* 深灰色文字 */
-}
-
