@@ -14,15 +14,17 @@ h1, h2, h3, h4, h5, h6 {
   color: #6E696D !important;  // 標題顏色
 }
 
-.content ::selection {
+/* ===== 修改選取文字的樣式 ===== */
+.markdown-preview-view ::selection {
+  background-color: #fff2b3 !important; /* 淡黃色 */
+  color: #6E696D !important;           /* 深灰色文字 */
+}
+
+.markdown-preview-view ::-moz-selection {
   background-color: #fff2b3 !important;
   color: #6E696D !important;
 }
 
-.content ::-moz-selection {
-  background-color: #fff2b3 !important;
-  color: #6E696D !important;
-}
 
 
 
