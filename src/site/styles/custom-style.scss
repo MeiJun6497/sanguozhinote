@@ -14,10 +14,16 @@ h1, h2, h3, h4, h5, h6 {
   color: #6E696D !important;  // 標題顏色
 }
 
-::selection {
-  background-color: #fff2b3;  // 淡黃色底色
-  color: #6E696D;             // 深灰文字
+.content ::selection {
+  background-color: #fff2b3 !important;
+  color: #6E696D !important;
 }
+
+.content ::-moz-selection {
+  background-color: #fff2b3 !important;
+  color: #6E696D !important;
+}
+
 
 
 /* ==================================================
