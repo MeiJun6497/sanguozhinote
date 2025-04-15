@@ -147,14 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-
-
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 60px;         /* 根據你的導覽列高度調整 */
-  z-index: 1000;        /* 確保它在其他內容上方 */
-  pointer-events: auto; /* 可以互動 */
+  width: calc(100% - 17px); /* 減去 scroll bar 的寬度，避免覆蓋 */
 }
+
