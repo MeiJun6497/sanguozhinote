@@ -1,61 +1,37 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const abbrs = document.querySelectorAll("abbr");
-  const tooltip = document.createElement("div");
-  tooltip.className = "abbr-tooltip";
-  document.body.appendChild(tooltip);
+  // 檢查所有帶有 abbr 標籤的元素
+  const abbrElements = document.querySelectorAll('abbr[title]');
 
-  abbrs.forEach(abbr => {
-    abbr.addEventListener("click", function (e) {
+  abbrElements.forEach(function (abbr) {
+    // 1. 建立 tooltip 元素
+    const tooltip = document.createElement('div');
+    tooltip.classList.add('tooltip');
+    tooltip.innerText = abbr.getAttribute('title');
+    tooltip.style.position = 'absolute';
+    tooltip.style.backgroundColor = '#333';
+    tooltip.style.color = '#fff';
+    tooltip.style.padding = '5px';
+    tooltip.style.borderRadius = '4px';
+    tooltip.style.fontSize = '12px';
+    tooltip.style.visibility = 'hidden';  // 初始狀態為隱藏
+    tooltip.style.zIndex = '9999';
+    document.body.appendChild(tooltip);
+
+    // 2. 點擊 abbr 顯示 tooltip
+    abbr.addEventListener('click', function (event) {
       const rect = abbr.getBoundingClientRect();
-      tooltip.textContent = abbr.getAttribute("title");
       tooltip.style.left = `${rect.left + window.scrollX}px`;
-      tooltip.style.top = `${rect.bottom + window.scrollY + 5}px`;
-      tooltip.style.display = "block";
+      tooltip.style.top = `${rect.top + window.scrollY + rect.height}px`; // 顯示在文字下方
+      tooltip.style.visibility = 'visible';
 
-      setTimeout(() => {
-        tooltip.style.display = "none";
-      }, 3000); // 3 秒後自動消失
-    });
-  });
+      // 點擊其他地方隱藏 tooltip
+      function hideTooltip() {
+        tooltip.style.visibility = 'hidden';
+        document.removeEventListener('click', hideTooltip);
+      }
 
-  // 點擊其他地方就關閉 tooltip
-  document.addEventListener("click", function (e) {
-    if (!e.target.closest("abbr")) {
-      tooltip.style.display = "none";
-    }
-  });
-});
-
-
-//============================================================
-document.addEventListener('DOMContentLoaded', function () {
-  const abbrElements = document.querySelectorAll('abbr');
-  
-  abbrElements.forEach(abbr => {
-    const tooltipText = abbr.getAttribute('title');
-    abbr.addEventListener('click', function () {
-      alert(tooltipText);
+      document.addEventListener('click', hideTooltip);
+      event.stopPropagation();  // 防止事件冒泡，避免觸發 document 的點擊事件
     });
   });
 });
-
-
-//============================================================
-document.addEventListener('DOMContentLoaded', function () {
-  const abbrElements = document.querySelectorAll('abbr');
-  
-  abbrElements.forEach(abbr => {
-    const tooltipText = abbr.getAttribute('title');
-    
-    // 使用 touchstart 來處理觸控事件
-    abbr.addEventListener('click', function () {
-      alert(tooltipText);
-    });
-
-    abbr.addEventListener('touchstart', function () {
-      alert(tooltipText);
-    });
-  });
-});
-
-
