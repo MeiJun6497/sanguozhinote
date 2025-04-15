@@ -147,6 +147,12 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-body {
-  padding-right: 20px;  /* 給右側留白，防止滾動條被擋住 */
+nav {
+  z-index: 1000;  /* 使 navi 的層級較高 */
 }
+
+body {
+  position: relative;
+  z-index: 1;  /* 確保滾動條位於 navi 之下 */
+}
+
