@@ -147,7 +147,6 @@ h1, h2, h3, h4, h5, h6 {
 
 
 
-nav {
-  width: calc(100% - 17px); /* 減去 scroll bar 的寬度，避免覆蓋 */
+body {
+  padding-right: 20px;  /* 給右側留白，防止滾動條被擋住 */
 }
-
