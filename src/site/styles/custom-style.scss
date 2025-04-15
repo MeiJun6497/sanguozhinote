@@ -7,6 +7,7 @@ body {
   font-family: 'Noto Serif TC', serif !important;  // 一般文字字體
   color: #6E696D !important;  // 一般文字顏色
   background-color: #f7f7f7 !important;  // 網頁底色
+  padding-top: 60px; 
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -47,13 +48,18 @@ blockquote {
                        Navi樣式
 ===================================================== */
 nav {
-  background-color: #f7f7f7  !important;   
+  background-color: #f7f7f7 !important;   
   color: #6E696D !important;
   padding: 0.2rem 0.2rem !important;
   height: 60px !important;
   font-size: 0.5rem !important;
-  position: relative;
+
+  position: fixed;         // 改成 fixed，讓它浮在最上層
+  top: 0;
+  left: 0;
+  right: 0;                // 確保不超過 viewport 的右邊
   z-index: 9000;
+  pointer-events: auto;    // 保持互動，但不會遮住 scrollbar
 }
 
 
