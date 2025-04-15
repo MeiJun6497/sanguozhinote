@@ -52,12 +52,11 @@ nav {
   padding: 0.2rem 0.2rem !important;
   height: 60px !important;
   font-size: 0.5rem !important;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: calc(100% - 8px); /* 減去滾動條的寬度 */
-  z-index: 1000;
 }
+
+
+
+
 
 
 /* ==================================================
@@ -150,9 +149,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
-body {
+/* ==================================================
+                  Scroll Bar最上層
+===================================================== */
+/* 確保 scroll bar 不會被 Navi 擋住 */
+body::-webkit-scrollbar {
+  z-index: 9999;
   position: relative;
-  z-index: 1;  /* 確保滾動條位於 navi 之下 */
 }
+
 
