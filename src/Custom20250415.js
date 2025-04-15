@@ -25,3 +25,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+//============================================================
+document.addEventListener('DOMContentLoaded', function () {
+  const abbrElements = document.querySelectorAll('abbr');
+  
+  abbrElements.forEach(abbr => {
+    const tooltipText = abbr.getAttribute('title');
+    abbr.addEventListener('click', function () {
+      alert(tooltipText);
+    });
+  });
+});
+
+
+//============================================================
+document.addEventListener('DOMContentLoaded', function () {
+  const abbrElements = document.querySelectorAll('abbr');
+  
+  abbrElements.forEach(abbr => {
+    const tooltipText = abbr.getAttribute('title');
+    
+    // 使用 touchstart 來處理觸控事件
+    abbr.addEventListener('click', function () {
+      alert(tooltipText);
+    });
+
+    abbr.addEventListener('touchstart', function () {
+      alert(tooltipText);
+    });
+  });
+});
+
+
