@@ -148,12 +148,24 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* ==================================================
-                  Scroll Bar最上層
+                  Scroll Bar避開navi
 ===================================================== */
-/* 確保 scroll bar 不會被 Navi 擋住 */
-body::-webkit-scrollbar {
-  z-index: 9999;
-  position: relative;
+.site-main {
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+  margin-top: 60px;
 }
+
+/* scroll bar 樣式 */
+.site-main::-webkit-scrollbar {
+  width: 8px;
+}
+
+.site-main::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+  min-height: 40px;
+}
+
 
 
