@@ -35,3 +35,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+//在abbr自動增加tabindex="0"
+document.addEventListener("DOMContentLoaded", function () {
+  const abbrElements = document.querySelectorAll('abbr[title]');
+  abbrElements.forEach(function (abbr) {
+    abbr.setAttribute('tabindex', '0');
+  });
+});
+
