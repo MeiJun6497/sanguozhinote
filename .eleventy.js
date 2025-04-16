@@ -578,15 +578,8 @@ module.exports = function (eleventyConfig) {
 
 
 
-module.exports = function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy({ "src/static": "/" });
-
-  return {
-    dir: {
-      input: "src",
-      output: "_site",
-    },
-  };
+module.exports = function(eleventyConfig) {
+  eleventyConfig.addPassthroughCopy({ "src/custom20250415.js": "js/custom20250415.js" });
 };
 
 
