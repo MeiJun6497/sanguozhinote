@@ -150,32 +150,22 @@ h1, h2, h3, h4, h5, h6 {
 /* ==================================================
                        tooltip
 ===================================================== */
-/* ===== 自訂tooltip ===== */
+/* 禁止原生 abbr tooltip 顯示 */
 abbr[title] {
-  position: relative;
-  text-decoration: underline dotted;
+  pointer-events: none; /* 禁止原生 tooltip 的觸發 */
 }
 
-abbr[title]:hover::after,
-abbr[title]:focus::after {
-  content: attr(title);
+/* 自定義 tooltip 的樣式 */
+.tooltip {
   position: absolute;
-  left: 0;
-  bottom: -30px;
-  background-color: #1e1e1e;
+  background-color: #333;
   color: #fff;
-  padding: 5px 8px;
+  padding: 5px;
   border-radius: 4px;
-  white-space: nowrap;
   font-size: 12px;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-}
-
-/* ===== 隱藏原生tooltip ===== */
-abbr[title]:hover::after {
-  content: none !important;
-  visibility: hidden !important;
+  visibility: hidden;  /* 初始隱藏 */
+  z-index: 9999;
+  /* 其他樣式 */
 }
 
 
