@@ -573,3 +573,8 @@ module.exports = function (eleventyConfig) {
     passthroughFileCopy: true,
   };
 };
+
+
+
+eleventyConfig.addPassthroughCopy({ "src/static": "/" });
+
