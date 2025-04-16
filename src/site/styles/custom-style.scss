@@ -148,8 +148,9 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /* ==================================================
-                    手機tooltip
+                       tooltip
 ===================================================== */
+/* ===== 自訂tooltip ===== */
 abbr[title] {
   position: relative;
   text-decoration: underline dotted;
@@ -169,5 +170,11 @@ abbr[title]:focus::after {
   font-size: 12px;
   z-index: 1000;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* ===== 隱藏原生tooltip ===== */
+abbr[title]:hover::after {
+  content: none !important;
+  visibility: hidden !important;
 }
 
