@@ -150,23 +150,30 @@ h1, h2, h3, h4, h5, h6 {
 /* ==================================================
                        tooltip
 ===================================================== */
-/* 禁止原生 abbr tooltip 顯示 */
+/* ===== 自訂tooltip ===== */
 abbr[title] {
-  position: relative; /* 確保 abbr 元素的位置可以設置 */
-  pointer-events: all; /* 使得 abbr 可以被點擊 */
-  cursor: pointer; /* 設置點擊時的光標樣式 */
+  position: relative;
+  text-decoration: underline dotted;
 }
 
-/* 自定義 tooltip 的樣式 */
-.tooltip {
+abbr[title]:hover::after,
+abbr[title]:focus::after {
+  content: attr(title);
   position: absolute;
-  background-color: #333;
+  left: 0;
+  bottom: -30px;
+  background-color: #1e1e1e;
   color: #fff;
-  padding: 5px;
+  padding: 5px 8px;
   border-radius: 4px;
+  white-space: nowrap;
   font-size: 12px;
-  visibility: hidden;  /* 初始隱藏 */
-  z-index: 9999;
-  /* 其他樣式 */
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
+/* ===== 隱藏原生tooltip ===== */
+abbr[title]:hover::after {
+  content: none !important;
+  visibility: hidden !important;
+}
