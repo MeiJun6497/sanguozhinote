@@ -150,37 +150,25 @@ h1, h2, h3, h4, h5, h6 {
 /* ==================================================
                     手機tooltip
 ===================================================== */
-
-.abbr-tooltip {
+abbr[title] {
   position: relative;
-  cursor: pointer;
-  border-bottom: 1px dotted #999;
+  text-decoration: underline dotted;
+  cursor: help;
 }
 
-.abbr-tooltip-box {
-  display: none;
+abbr[title]:hover::after,
+abbr[title]:focus::after {
+  content: attr(title);
   position: absolute;
-  z-index: 9999;
-  bottom: 125%; /* 可根據需要調整位置 */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #444;
+  left: 0;
+  bottom: -30px;
+  background-color: #1e1e1e;
   color: #fff;
-  padding: 6px 8px;
+  padding: 5px 8px;
   border-radius: 4px;
-  font-size: 0.75rem;
-  white-space: normal;
-  max-width: 250px;
-}
-
-.abbr-tooltip-box::after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 5px;
-  border-style: solid;
-  border-color: #444 transparent transparent transparent;
+  white-space: nowrap;
+  font-size: 12px;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
