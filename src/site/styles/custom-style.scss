@@ -1,7 +1,7 @@
 /* ===================================================================================================
-                                         自定義顏色變數
+                                        A.自定義顏色變數
 ==================================================================================================== */
-/* 下面code如果要引用這邊的變數，格式請用color: var(--green) !important; */
+/* A1.下面code如果要引用這邊的變數，格式請用var(--green) */
 :root {
     --beige: #f7f3ed;   
     --grey1: #4A4A48;  /*較淺*/
@@ -11,12 +11,12 @@
 }
 
 /* ===================================================================================================
-                                      修正連結顏色 Gimini版
+                                     B.修正連結顏色 Gimini版
 ==================================================================================================== */
 
 /* --- 強制修正所有超連結顏色 --- */
 
-/* 1. 全局強制連結顏色（包含腳註與內文連結） */
+/* B1. 全局強制連結顏色（包含腳註與內文連結） */
 .markdown-rendered a,
 .markdown-rendered a:visited,
 .markdown-rendered a:link,
@@ -26,13 +26,13 @@
     transition: opacity 0.2s ease !important;
 }
 
-/* 2. 懸停效果 (當滑鼠移上去時稍微變色) */
+/* B2. 懸停效果 (當滑鼠移上去時稍微變色) */
 .markdown-rendered a:hover {
     color:var(--grey1) !important;
     opacity: 0.8 !important;
 }
 
-/* 3. 特殊處理：防止標題內的連結被強行染紫 */
+/* B3. 特殊處理：防止標題內的連結被強行染紫 */
 .markdown-rendered h1 a, 
 .markdown-rendered h2 a, 
 .markdown-rendered h3 a {
@@ -40,7 +40,7 @@
     text-decoration: none !important;
 }
 
-/* 4. 針對註釋區域的特定優化 (若有特定 Class) */
+/* B4. 針對註釋區域的特定優化 (若有特定 Class) */
 .footnote-backref, 
 .footnote-ref {
     color:var(--grey1) !important;
@@ -50,28 +50,40 @@
 
 
 /* ===================================================================================================
-                                    以上為強制覆蓋超連結顏色用的code
-                                          以下樣式設計開始
+                                          C.網頁樣式設計
 ==================================================================================================== */
 
 /* --- 古風長篇：思源宋體侵入式特調 --- */
 
-/* 1. 強制載入 Google Fonts */
+/* C1. 強制載入 Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700&display=swap');
 
-/* 2. 核心變數覆蓋 (Digital Garden 原生變數) */
+/* C2. 全局覆蓋Digital Garden原生外觀 */
 :root {
-    --body-background:  var(--beige) !important;
-    --text-normal:  var(--grey1) !important;       
-    --text-muted:  var(--grey1) !important;
-    --interactive-accent:  var(--grey1) !important; 
-    --title-color:  var(--grey2) !important;        /* 更新為你要求的標題色 */
-    --highlight-1:  var(--green) !important;
-    --highlight-2:  var(--red) !important;
-    --font-family: 'Noto Serif TC', serif !important;
+    --body-background:  var(--beige) !important;         /* 網頁底色 */
+    --text-normal:  var(--grey1) !important;             /* 一般文字 */
+    --text-muted:  var(--grey1) !important;              /* 輔助文字 */
+    --interactive-accent:  var(--grey1) !important;      /* 可互動元素 */
+    --title-color:  var(--grey2) !important;             /* 標題 */
+    --highlight-1:  var(--green) !important;             /* Highlight 1 */
+    --highlight-2:  var(--red) !important;               /* Highlight 2 */
+    --font-family: 'Noto Serif TC', serif !important;    /* 字體 */
 }
 
-/* 3. 全局強制樣式 (針對所有模式) */
+/* C3. 指定Obsidian中Painter插件的hltr-g及hltr-r顏色  */ 
+.markdown-rendered mark.hltr-r {
+    background-color: transparent !important;
+    color: var(--red) !important;                        /* 指定hltr-r為前面自定義的紅色 */
+    font-weight: 500 !important;
+}
+
+.markdown-rendered mark.hltr-g {
+    background-color: transparent !important;
+    color: var(--green) !important;                      /* 指定hltr-g為前面自定義的綠色 */
+    font-weight: 500 !important;
+}
+
+/* C4. 全局強制樣式 (針對所有模式) */
 body.theme-light, 
 body.theme-dark, 
 .markdown-rendered,
@@ -83,7 +95,7 @@ body.theme-dark,
     -webkit-font-smoothing: antialiased;
 }
 
-/* 4. 標題樣式：去除底線，強化古風 */
+/* C5. 標題樣式：去除底線，強化古風 */
 .markdown-rendered h1, 
 .markdown-rendered h2, 
 .markdown-rendered h3, 
@@ -97,33 +109,14 @@ body.theme-dark,
     margin-bottom: 1em !important;
 }
 
-/* 5. 設定兩種 Highlight 文字顏色 (不帶底色、不帶底線) */
-/* 第一種：使用標記 <mark> 或 Obsidian 的 ==highlight== */
-.markdown-rendered mark, 
-mark {
-    background-color: transparent !important; /* 移除底色 */
-    color: #5B7865 !important;                /* 綠色 */
-    font-weight: 500 !important;
-    text-decoration: none !important;         /* 移除底線 */
-}
-
-/* 第二種：使用粗體 **bold** 作為另一種強烈強調色 */
-.markdown-rendered strong, 
-strong {
-    background-color: transparent !important;
-    color: #9E4A4A !important;                /* 紅色 */
-    font-weight: 500 !important;
-    text-decoration: none !important;
-}
-
-/* 6. 內容區塊寬度優化 (防止長篇文字橫向過長) */
+/* C6. 內容區塊寬度優化 (防止長篇文字橫向過長) */
 .content, .markdown-section {
     max-width: 800px !important;
     margin: 0 auto !important;
     padding: 2rem 1rem !important;
 }
 
-/* 7. 移除連結的預設底線 (可選，增加清爽感) */
+/* C7. 移除連結的預設底線 (可選，增加清爽感) */
 .markdown-rendered a {
     text-decoration: none !important;
     color: var(--interactive-accent) !important;
@@ -133,15 +126,3 @@ strong {
     opacity: 0.8;
 }
 
-/*8. Painter 插件適配 (新增)  */ 
-.markdown-rendered mark.hltr-r {
-    background-color: transparent !important;
-    color: var(--highlight-2) !important;
-    font-weight: 500 !important;
-}
-
-.markdown-rendered mark.hltr-g {
-    background-color: transparent !important;
-    color: var(--highlight-1) !important;
-    font-weight: 500 !important;
-}
