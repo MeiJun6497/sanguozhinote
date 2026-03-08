@@ -127,10 +127,17 @@ body.theme-dark,
 }
 
 /*C8. 修正navbar顏色 */
-/* 強制覆蓋：利用 body 層級提高優先權 */
-body .navbar {
+/* --- 最終防禦：直接針對 navbar 的背景屬性進行「外科手術式」覆蓋 --- */
+body.theme-light .navbar, 
+body.theme-dark .navbar,
+.navbar {
     background-color: var(--mybackground) !important;
-    border: none !important;
-    box-shadow: none !important;
-    background-image: none !important; /* 有些主題用背景圖模擬顏色，這行能移除它 */
+    background-image: none !important;
+    /* 這裡刻意加入一個偽背景，如果背景圖片或漸層在作祟，這能把它蓋掉 */
+    background: var(--mybackground) !important; 
+}
+
+/* 確保整個導航列的容器背景色都被清空並強制設為米色 */
+#site-header, .site-header, .navbar-container {
+    background-color: var(--mybackground) !important;
 }
