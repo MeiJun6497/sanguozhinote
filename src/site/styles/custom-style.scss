@@ -1,13 +1,13 @@
 /* ===================================================================================================
                                         A.自定義顏色變數
 ==================================================================================================== */
-/* A1.下面code如果要引用這邊的變數，格式請用var(--green) */
+/* A1.下面code如果要引用這邊的變數，格式請用var(--mygreen) */
 :root {
-    --beige: #f7f3ed;   
-    --grey1: #4A4A48;  /*較淺*/
-    --grey2: #262625;  /*較深*/
-    --green: #5B7865;
-    --red: #9E4A4A;
+    --mybeige: #f7f3ed;   
+    --mygrey1: #4A4A48;  /*較淺*/
+    --mygrey2: #262625;  /*較深*/
+    --mygreen: #5B7865;
+    --myred: #9E4A4A;
 }
 
 /* ===================================================================================================
@@ -21,14 +21,14 @@
 .markdown-rendered a:visited,
 .markdown-rendered a:link,
 .markdown-rendered .footnote-link {
-    color:var(--grey2) !important;
+    color:var(--mygrey2) !important;
     text-decoration: none !important; /* 去除底線 */
     transition: opacity 0.2s ease !important;
 }
 
 /* B2. 懸停效果 (當滑鼠移上去時稍微變色) */
 .markdown-rendered a:hover {
-    color:var(--grey1) !important;
+    color:var(--mygrey1) !important;
     opacity: 0.8 !important;
 }
 
@@ -36,14 +36,14 @@
 .markdown-rendered h1 a, 
 .markdown-rendered h2 a, 
 .markdown-rendered h3 a {
-    color:var(--grey2) !important;
+    color:var(--mygrey2) !important;
     text-decoration: none !important;
 }
 
 /* B4. 針對註釋區域的特定優化 (若有特定 Class) */
 .footnote-backref, 
 .footnote-ref {
-    color:var(--grey1) !important;
+    color:var(--mygrey1) !important;
     font-weight: bold;
     padding: 0 2px;
 }
@@ -60,26 +60,24 @@
 
 /* C2. 全局覆蓋Digital Garden原生外觀 */
 :root {
-    --body-background:  var(--beige) !important;         /* 網頁底色 */
-    --text-normal:  var(--grey1) !important;             /* 一般文字 */
-    --text-muted:  var(--grey1) !important;              /* 輔助文字 */
-    --interactive-accent:  var(--grey1) !important;      /* 可互動元素 */
-    --title-color:  var(--grey2) !important;             /* 標題 */
-    --highlight-1:  var(--green) !important;             /* Highlight 1 */
-    --highlight-2:  var(--red) !important;               /* Highlight 2 */
+    --body-background:  var(--mybeige) !important;         /* 網頁底色 */
+    --text-normal:  var(--mygrey1) !important;             /* 一般文字 */
+    --text-muted:  var(--mygrey1) !important;              /* 輔助文字 */
+    --interactive-accent:  var(--mygrey1) !important;      /* 可互動元素 */
+    --title-color:  var(--mygrey2) !important;             /* 標題 */
     --font-family: 'Noto Serif TC', serif !important;    /* 字體 */
 }
 
 /* C3. 指定Obsidian中Painter插件的hltr-g及hltr-r顏色  */ 
 .markdown-rendered mark.hltr-r {
     background-color: transparent !important;
-    color:  #9E4A4A !important;                        /* 指定hltr-r為前面自定義的紅色 */
+    color:   var(--myred) !important;                        /* 指定hltr-r為前面自定義的紅色 */
     font-weight: 500 !important;
 }
 
 .markdown-rendered mark.hltr-g {
     background-color: transparent !important;
-    color: var(--green) !important;                      /* 指定hltr-g為前面自定義的綠色 */
+    color: var(--mygreen) !important;                      /* 指定hltr-g為前面自定義的綠色 */
     font-weight: 500 !important;
 }
 
