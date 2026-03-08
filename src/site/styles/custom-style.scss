@@ -3,10 +3,10 @@
 
 /* 使用最高權重的 ID 與 Class 組合 */
 body.theme-light, body.theme-dark, #site-body {
-  --bg-color: #f7f3ed;
-  --text-main: #2c2c2c;
-  --accent-color: #8b4513;
-  --border-color: #dcd3c1;
+  --bg-color: #f7f3ed !important;
+  --text-main: #2c2c2c !important;
+  --accent-color: #8b4513 !important;
+  --border-color: #dcd3c1 !important;
   
   background-color: var(--bg-color) !important;
   font-family: 'Noto Serif TC', serif !important;
