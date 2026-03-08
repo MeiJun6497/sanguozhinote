@@ -126,9 +126,10 @@ body.theme-dark,
 }
 
 /*C8. 修正navbar顏色 */
-#site-body .navbar,
+/* 強制覆蓋：利用 body 層級提高優先權 */
 body .navbar {
     background-color: var(--mybackground) !important;
     border: none !important;
     box-shadow: none !important;
+    background-image: none !important; /* 有些主題用背景圖模擬顏色，這行能移除它 */
 }
