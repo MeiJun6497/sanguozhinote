@@ -1,24 +1,42 @@
-/* 針對所有層級標題的強制覆蓋 */
-.markdown-rendered h1,
-.markdown-rendered h2,
-.markdown-rendered h3,
-.markdown-rendered h4,
-.markdown-rendered h5,
-.markdown-rendered h6 {
-    /* 這裡使用你的標題變數，如果變數無效，請直接改顏色碼 */
-    color: #2c2c2c !important; 
-    font-family: 'Noto Serif TC', serif !important;
-    border-bottom: none !important;
-    text-align: center !important;
-    margin-top: 2em !important;
-    margin-bottom: 1em !important;
-    
-    /* 這是最關鍵的一步：移除任何可能存在的超連結顏色繼承 */
-    a {
-        color: #2c2c2c !important;
-        text-decoration: none !important;
-    }
+/* ===================================================================================================
+                                    修正連結顏色 Gimini版
+==================================================================================================== */
+
+/* --- 強制修正所有超連結顏色 --- */
+
+/* 1. 全局強制連結顏色（包含腳註與內文連結） */
+.markdown-rendered a,
+.markdown-rendered a:visited,
+.markdown-rendered a:link,
+.markdown-rendered .footnote-link {
+    color: #8B4513 !important; /* 強制改為赭石色 */
+    text-decoration: none !important; /* 去除底線 */
+    transition: opacity 0.2s ease !important;
 }
+
+/* 2. 懸停效果 (當滑鼠移上去時稍微變色) */
+.markdown-rendered a:hover {
+    color: #5D2E0B !important; 
+    opacity: 0.8 !important;
+}
+
+/* 3. 特殊處理：防止標題內的連結被強行染紫 */
+.markdown-rendered h1 a, 
+.markdown-rendered h2 a, 
+.markdown-rendered h3 a {
+    color: #2c2c2c !important; /* 標題內的連結維持深灰色 */
+    text-decoration: none !important;
+}
+
+/* 4. 針對註釋區域的特定優化 (若有特定 Class) */
+.footnote-backref, 
+.footnote-ref {
+    color: #8B4513 !important;
+    font-weight: bold;
+    padding: 0 2px;
+}
+
+
 /* ===================================================================================================
                                     以上為強制覆蓋超連結顏色用的code
                                           以下樣式設計開始
