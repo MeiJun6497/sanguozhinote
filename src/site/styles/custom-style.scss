@@ -11,3 +11,34 @@ body {
     //   color: black;
     //  }
 }
+
+
+body {
+  background-color: #f7f3ed;
+  color: #2c2c2c;
+  font-family: "Noto Serif TC", serif;
+  line-height: 1.8;
+  padding: 2rem;
+}
+
+.article-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-align: center;
+  border-bottom: 1px solid #dcd3c1;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.classic-text {
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  text-align: justify;
+}
+
+.annotation-link {
+  color: #8b4513; /* 赭石色 */
+  border-bottom: 1px dotted #8b4513;
+  cursor: help;
+  text-decoration: none;
+}
