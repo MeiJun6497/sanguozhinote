@@ -1,52 +1,85 @@
-/* 強制引入字體 */
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
+/* --- 古風長篇：思源宋體侵入式特調 --- */
 
-/* 使用最高權重的 ID 與 Class 組合 */
-body.theme-light, body.theme-dark, #site-body {
-  --bg-color: #f7f3ed !important;
-  --text-main: #2c2c2c !important;
-  --accent-color: #8b4513 !important;
-  --border-color: #dcd3c1 !important;
-  
-  background-color: var(--bg-color) !important;
-  font-family: 'Noto Serif TC', serif !important;
-  color: var(--text-main) !important;
+/* 1. 強制載入 Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700&display=swap');
+
+/* 2. 核心變數覆蓋 (Digital Garden 原生變數) */
+:root {
+    --body-background: #f7f3ed !important;    /* 宣紙背景 */
+    --text-normal: #2c2c2c !important;        /* 一般文字 */
+    --text-muted: #555555 !important;
+    --interactive-accent: #8b4513 !important; /* 赭石色 */
+:root {
+    /* ... 其他變數保持不變 ... */
+    
+    /* 標題顏色 */
+    --title-color: #2c2c2c !important; /* 玄青色：穩重且易讀 */
+    
+    /* 強調顏色 (Highlight 1 & 2) */
+    --highlight-1: #4A634D !important; /* 青瓷綠：用於關鍵概念或引用 */
+    --highlight-2: #A52A2A !important; /* 胭脂紅：用於註釋或重要補充 */
+}
+    --font-family: 'Noto Serif TC', serif !important;
 }
 
-/* 針對 Digital Garden 生成的內容主體 */
-.markdown-rendered, .content, .markdown-section {
-  max-width: 850px !important;
-  margin: 0 auto !important;
-  line-height: 2.2 !important; 
-  font-family: 'Noto Serif TC', serif !important;
-  font-size: 1.15rem !important;
-  color: var(--text-main) !important;
-  background-color: transparent !important; /* 讓背景透出 body 的宣紙色 */
+/* 3. 全局強制樣式 (針對所有模式) */
+body.theme-light, 
+body.theme-dark, 
+.markdown-rendered,
+#site-body {
+    background-color: var(--body-background) !important;
+    font-family: 'Noto Serif TC', serif !important;
+    color: var(--text-normal) !important;
+    line-height: 2.1 !important; /* 古籍感行高 */
+    -webkit-font-smoothing: antialiased;
 }
 
-/* 標題與古籍感裝飾 */
-.markdown-rendered h1, .markdown-rendered h2, .markdown-rendered h3 {
-  font-family: 'Noto Serif TC', serif !important;
-  border-bottom: 1px solid var(--border-color) !important;
-  text-align: center !important;
-  margin-top: 2.5rem !important;
-  padding-bottom: 0.5rem !important;
-  color: var(--text-main) !important;
+/* 4. 標題樣式：去除底線，強化古風 */
+.markdown-rendered h1, 
+.markdown-rendered h2, 
+.markdown-rendered h3, 
+.markdown-rendered h4 {
+    color: var(--title-color) !important;
+    font-family: 'Noto Serif TC', serif !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    border-bottom: none !important; /* 移除預設底線 */
+    margin-top: 2em !important;
+    margin-bottom: 1em !important;
 }
 
-/* 註釋優化 (適用於 Obsidian 標記) */
+/* 5. 兩種 Highlight 文字顏色 (不帶底色、不帶底線) */
+/* 第一種：使用標記 <mark> 或 Obsidian 的 ==highlight== */
+.markdown-rendered mark, 
 mark {
-  background-color: rgba(139, 69, 19, 0.1) !important; /* 淡淡的赭石底色 */
-  color: var(--accent-color) !important;
-  border-bottom: 1px dotted var(--accent-color) !important;
+    background-color: transparent !important; /* 移除底色 */
+    color: #8b4513 !important;                /* 赭石色：用於註釋 */
+    font-weight: 500 !important;
+    text-decoration: none !important;         /* 移除底線 */
 }
 
-/* 引用區塊轉為古風 */
-blockquote {
-  border-left: 4px solid var(--accent-color) !important;
-  background-color: #efeadf !important;
-  padding: 1.2rem !important;
-  margin: 1.5rem 0 !important;
-  font-style: normal !important;
-  border-radius: 4px !important;
+/* 第二種：使用粗體 **bold** 作為另一種強烈強調色 */
+.markdown-rendered strong, 
+strong {
+    background-color: transparent !important;
+    color: #4a634d !important;                /* 竹青色：用於人名或關鍵字 */
+    font-weight: 700 !important;
+    text-decoration: none !important;
+}
+
+/* 6. 內容區塊寬度優化 (防止長篇文字橫向過長) */
+.content, .markdown-section {
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    padding: 2rem 1rem !important;
+}
+
+/* 7. 移除連結的預設底線 (可選，增加清爽感) */
+.markdown-rendered a {
+    text-decoration: none !important;
+    color: var(--interactive-accent) !important;
+}
+
+.markdown-rendered a:hover {
+    opacity: 0.8;
 }
