@@ -1,35 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');  // 引入思源宋體
+/* --- 古風長篇閱讀主題：思源宋體特調 --- */
 
-/* ==================================================
-                        字型與底色
-===================================================== */
-body {
-  font-family: 'Noto Serif TC', serif !important;  // 一般文字字體
-  color: #6E696D !important;  // 一般文字顏色
-  background-color: #f7f7f7 !important;  // 網頁底色
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700&display=swap');
+
+:root {
+  /* 定義古風配色 */
+  --bg-color: #f7f3ed;         /* 宣紙色 */
+  --text-main: #2c2c2c;        /* 玄青 */
+  --accent-color: #8b4513;     /* 赭石 (用於註釋) */
+  --border-color: #dcd3c1;     /* 舊紙邊界 */
+  --hover-bg: #efeadf;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Noto Serif TC', serif !important;  // 標題字體
-  color: #6E696D !important;  // 標題顏色
+/* 應用於 Digital Garden 的主容器 */
+body.theme-light, 
+body.theme-dark { 
+  background-color: var(--bg-color) !important;
+  font-family: 'Noto Serif TC', serif !important;
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
 }
 
-
-/* ==================================================
-                     高亮文字顏色
-===================================================== */
-mark.hltr-r {
-  background-color: transparent !important;
-  color: #bf616a !important;  // 設定紅色
+/* 內容區塊優化 */
+.content {
+  max-width: 800px !important; /* 限制寬度提升閱讀舒適度 */
+  margin: 0 auto;
+  line-height: 2.1 !important;  /* 增加行高，仿古籍間距 */
+  letter-spacing: 0.03em;
+  padding: 40px 20px;
 }
 
-mark.hltr-g {
-  background-color: transparent !important;
-  color: #679e67 !important;  // 設定綠色
+/* 標題樣式 */
+h1, h2, h3 {
+  font-family: 'Noto Serif TC', serif !important;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5em;
+  margin-top: 2em;
 }
 
+/* 註釋樣式：建議在 Obsidian 中使用 [[#^footnote]] 或 <mark> */
+mark {
+  background-color: transparent;
+  color: var(--accent-color);
+  border-bottom: 1px dotted var(--accent-color);
+  font-weight: 500;
+  cursor: help;
+}
 
+/* 針對 Obsidian 引用區塊 (Blockquote) 的古風改造 */
+blockquote {
+  border-left: 3px solid var(--accent-color) !important;
+  background-color: var(--hover-bg) !important;
+  font-style: normal;
+  color: #555;
+  padding: 15px 25px !important;
+  margin: 20px 0;
+  border-radius: 2px;
+}
 
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+/* 針對數位花園連結的調整 */
+.internal-link {
+  color: var(--accent-color) !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: var(--hover-bg);
+    border-bottom: 1px solid var(--accent-color);
+  }
+}
+
+/* 隱藏不必要的 UI 元素以保持清爽 */
+.site-body-left-column, .site-body-right-column {
+  /* 如果您想要全螢幕純淨閱讀，可以取消下方註解 */
+  /* opacity: 0.8; */
+}
+
+/* 行動端優化 */
+@media (max-width: 480px) {
+  .content {
+    line-height: 1.8 !important;
+    padding: 20px 15px;
+  }
 }
