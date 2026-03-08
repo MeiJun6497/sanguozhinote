@@ -73,13 +73,13 @@
 .markdown-rendered mark.hltr-r {
     background-color: transparent !important;
     color:   var(--myred) !important;                        /* 指定hltr-r為前面自定義的紅色 */
-    font-weight: 450 !important;
+    font-weight: 400 !important;
 }
 
 .markdown-rendered mark.hltr-g {
     background-color: transparent !important;
     color: var(--mygreen) !important;                      /* 指定hltr-g為前面自定義的綠色 */
-    font-weight: 450 !important;
+    font-weight: 400 !important;
 }
 
 /* C4. 全局強制樣式 (針對所有模式) */
