@@ -9,7 +9,11 @@
     --mytext-3: #333331;  /* 深灰 */
     --myhighlight-1: #609466;  /* 綠 */
     --myhighlight-2: #b04f4f;  /* 紅 */
-    --background-secondary: #f7f3ed !important;  /* 為了配合navbar原生變數添加的 */
+
+  /* 強制覆蓋主題全域變數 為了配合navbar原生變數添加的*/
+    --background-secondary: var(--mybackground) !important;
+    --background-primary: var(--mybackground) !important;
+   
 }
 
 /* ===================================================================================================
