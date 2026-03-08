@@ -1,31 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap');  // 引入思源宋體
 
+/* ==================================================
+                        字型與底色
+===================================================== */
 body {
-  background-color: #f7f3ed;
-  color: #2c2c2c;
-  font-family: "Noto Serif TC", serif;
-  line-height: 1.8;
-  padding: 2rem;
+  font-family: 'Noto Serif TC', serif !important;  // 一般文字字體
+  color: #6E696D !important;  // 一般文字顏色
+  background-color: #f7f7f7 !important;  // 網頁底色
 }
 
-.article-title {
-  font-weight: 700;
-  font-size: 2.5rem;
-  text-align: center;
-  border-bottom: 1px solid #dcd3c1;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif TC', serif !important;  // 標題字體
+  color: #6E696D !important;  // 標題顏色
 }
 
-.classic-text {
-  font-size: 1.25rem;
-  letter-spacing: 0.05em;
-  text-align: justify;
+
+/* ==================================================
+                     高亮文字顏色
+===================================================== */
+mark.hltr-r {
+  background-color: transparent !important;
+  color: #bf616a !important;  // 設定紅色
 }
 
-.annotation-link {
-  color: #8b4513; /* 赭石色 */
-  border-bottom: 1px dotted #8b4513;
-  cursor: help;
-  text-decoration: none;
+mark.hltr-g {
+  background-color: transparent !important;
+  color: #679e67 !important;  // 設定綠色
+}
+
+
+
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
