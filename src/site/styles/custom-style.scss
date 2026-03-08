@@ -126,8 +126,8 @@ body.theme-dark,
 }
 
 /*C8. 修正navbar顏色 */
-/* 強制覆蓋 navbar 的背景色，移除原本錯誤的定義 */
-.navbar {
+#site-body .navbar,
+body .navbar {
     background-color: var(--mybackground) !important;
     border: none !important;
     box-shadow: none !important;
