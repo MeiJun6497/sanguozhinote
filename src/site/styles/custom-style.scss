@@ -4,8 +4,9 @@
 /* A1.下面code如果要引用這邊的變數，格式請用var(--mygreen) */
 :root {
     --mybeige: #f7f3ed;   
-    --mygrey1: #40403E;  /*較淺*/
-    --mygrey2: #40403C;  /*較深*/
+    --mygrey1: #4f4f4d;  /* 淺 */
+    --mygrey2: #333331;  /* 中 */
+    --mygrey3: #262625;  /* 深 */
     --mygreen: #5A8267;
     --myred: #AD5555;
 }
@@ -61,10 +62,10 @@
 /* C2. 全局覆蓋Digital Garden原生外觀 */
 :root {
     --body-background:  var(--mybeige) !important;         /* 網頁底色 */
-    --text-normal:  var(--mygrey1) !important;             /* 一般文字 */
+    --text-normal:  var(--mygrey2) !important;             /* 一般文字 */
     --text-muted:  var(--mygrey1) !important;              /* 輔助文字 */
-    --interactive-accent:  var(--mygrey1) !important;      /* 可互動元素 */
-    --title-color:  var(--mygrey2) !important;             /* 標題 */
+    --interactive-accent:  var(--mygrey2) !important;      /* 可互動元素 */
+    --title-color:  var(--mygrey3) !important;             /* 標題 */
     --font-family: 'Noto Serif TC', serif !important;    /* 字體 */
 }
 
