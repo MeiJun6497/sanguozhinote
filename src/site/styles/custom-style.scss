@@ -126,25 +126,9 @@ body.theme-dark,
 }
 
 /*C8. 修正navbar顏色 */
-  /* 強制覆蓋 navbar 的背景色與邊框 */
-.navbar, 
-.site-header, 
-nav {
+/* 強制覆蓋 navbar 的背景色，移除原本錯誤的定義 */
+.navbar {
     background-color: var(--mybackground) !important;
-    border: none !important; /* 強制移除邊框 */
-    box-shadow: none !important; /* 移除可能的陰影邊線 */
-}
-
-  /* 針對 navbar 內的所有文字與連結 */
-.navbar a, 
-.navbar .navbar-item, 
-.navbar .site-title {
-    color: var(--mytext-3) !important;
-}
-
-  /* 處理可能的深層容器顏色 */
-.navbar-menu, 
-.navbar-end, 
-.navbar-start {
-    background-color: var(--mybackground) !important;
+    border: none !important;
+    box-shadow: none !important;
 }
