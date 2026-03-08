@@ -60,7 +60,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700&display=swap');
 
 /* C2. 全局覆蓋Digital Garden原生外觀 */
-:root {
+body, .markdown-rendered, .markdown-rendered p, .markdown-rendered div {
     --body-background:  var(--mybeige) !important;         /* 網頁底色 */
     --text-normal:  var(--mygrey3) !important;             /* 一般文字 */
     --text-muted:  var(--mygrey1) !important;              /* 輔助文字 */
