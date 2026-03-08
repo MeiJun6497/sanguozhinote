@@ -1,5 +1,17 @@
 /* ===================================================================================================
-                                    修正連結顏色 Gimini版
+                                         自定義顏色變數
+==================================================================================================== */
+/* 下面code如果要引用這邊的變數，格式請用color: var(--green) !important; */
+:root {
+    --beige: #f7f3ed;   
+    --grey1: #4A4A48;  /*較淺*/
+    --grey2: #262625;  /*較深*/
+    --green: #5B7865;
+    --red: #9E4A4A;
+}
+
+/* ===================================================================================================
+                                      修正連結顏色 Gimini版
 ==================================================================================================== */
 
 /* --- 強制修正所有超連結顏色 --- */
@@ -9,14 +21,14 @@
 .markdown-rendered a:visited,
 .markdown-rendered a:link,
 .markdown-rendered .footnote-link {
-    color: #262625 !important; /* 強制改為深灰色 */
+    color:var(--grey2) !important;
     text-decoration: none !important; /* 去除底線 */
     transition: opacity 0.2s ease !important;
 }
 
 /* 2. 懸停效果 (當滑鼠移上去時稍微變色) */
 .markdown-rendered a:hover {
-    color: #4A4A48 !important; 
+    color:var(--grey1) !important;
     opacity: 0.8 !important;
 }
 
@@ -24,14 +36,14 @@
 .markdown-rendered h1 a, 
 .markdown-rendered h2 a, 
 .markdown-rendered h3 a {
-    color: #262625 !important; /* 標題內的連結維持深灰色 */
+    color:var(--grey2) !important;
     text-decoration: none !important;
 }
 
 /* 4. 針對註釋區域的特定優化 (若有特定 Class) */
 .footnote-backref, 
 .footnote-ref {
-    color: #262625 !important;
+    color:var(--grey1) !important;
     font-weight: bold;
     padding: 0 2px;
 }
@@ -49,13 +61,13 @@
 
 /* 2. 核心變數覆蓋 (Digital Garden 原生變數) */
 :root {
-    --body-background: #f7f3ed !important;
-    --text-normal: #4A4A48 !important;        /* 更新為你要求的深灰 */
-    --text-muted: #555555 !important;
-    --interactive-accent: #262625 !important; 
-    --title-color: #262625 !important;        /* 更新為你要求的標題色 */
-    --highlight-1: #5B7865 !important;
-    --highlight-2: #9E4A4A !important;
+    --body-background:  var(--beige) !important;
+    --text-normal:  var(--grey1) !important;       
+    --text-muted:  var(--grey1) !important;
+    --interactive-accent:  var(--grey1) !important; 
+    --title-color:  var(--grey2) !important;        /* 更新為你要求的標題色 */
+    --highlight-1:  var(--green) !important;
+    --highlight-2:  var(--red) !important;
     --font-family: 'Noto Serif TC', serif !important;
 }
 
