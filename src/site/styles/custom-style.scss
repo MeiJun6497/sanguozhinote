@@ -1,3 +1,29 @@
+/* 針對所有層級標題的強制覆蓋 */
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6 {
+    /* 這裡使用你的標題變數，如果變數無效，請直接改顏色碼 */
+    color: #2c2c2c !important; 
+    font-family: 'Noto Serif TC', serif !important;
+    border-bottom: none !important;
+    text-align: center !important;
+    margin-top: 2em !important;
+    margin-bottom: 1em !important;
+    
+    /* 這是最關鍵的一步：移除任何可能存在的超連結顏色繼承 */
+    a {
+        color: #2c2c2c !important;
+        text-decoration: none !important;
+    }
+}
+/* ===================================================================================================
+                                    以上為強制覆蓋超連結顏色用的code
+                                          以下樣式設計開始
+==================================================================================================== */
+
 /* --- 古風長篇：思源宋體侵入式特調 --- */
 
 /* 1. 強制載入 Google Fonts */
