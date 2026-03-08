@@ -125,3 +125,6 @@ body.theme-dark,
     opacity: 0.8;
 }
 
+/*C8. 修正navbar顏色 */
+.navbar {
+    background-color: var(--mybackground) !important; 
