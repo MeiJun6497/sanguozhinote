@@ -49,20 +49,13 @@
 
 /* 2. 核心變數覆蓋 (Digital Garden 原生變數) */
 :root {
-    --body-background: #f7f3ed !important;    /* 宣紙背景 */
-    --text-normal: #2c2c2c !important;        /* 一般文字 */
+    --body-background: #f7f3ed !important;
+    --text-normal: #4A4A48 !important;        /* 更新為你要求的深灰 */
     --text-muted: #555555 !important;
-    --interactive-accent: #262625 !important; /* 赭石色 */
-:root {
-    /* ... 其他變數保持不變 ... */
-    
-    /* 標題顏色 */
-    --title-color: #262625 !important; /* 玄青色：穩重且易讀 */
-    
-    /* 強調顏色 (Highlight 1 & 2) */
-    --highlight-1: #5B7865 !important; /* 青瓷綠：用於關鍵概念或引用 */
-    --highlight-2: #9E4A4A !important; /* 胭脂紅：用於註釋或重要補充 */
-}
+    --interactive-accent: #262625 !important; 
+    --title-color: #262625 !important;        /* 更新為你要求的標題色 */
+    --highlight-1: #5B7865 !important;
+    --highlight-2: #9E4A4A !important;
     --font-family: 'Noto Serif TC', serif !important;
 }
 
@@ -92,7 +85,7 @@ body.theme-dark,
     margin-bottom: 1em !important;
 }
 
-/* 5. 兩種 Highlight 文字顏色 (不帶底色、不帶底線) */
+/* 5. 設定兩種 Highlight 文字顏色 (不帶底色、不帶底線) */
 /* 第一種：使用標記 <mark> 或 Obsidian 的 ==highlight== */
 .markdown-rendered mark, 
 mark {
@@ -106,8 +99,8 @@ mark {
 .markdown-rendered strong, 
 strong {
     background-color: transparent !important;
-    color: #9E4A4A !important;                /* 紅色：用於人名或關鍵字 */
-    font-weight: 700 !important;
+    color: #9E4A4A !important;                /* 紅色 */
+    font-weight: 500 !important;
     text-decoration: none !important;
 }
 
@@ -126,4 +119,19 @@ strong {
 
 .markdown-rendered a:hover {
     opacity: 0.8;
+}
+
+/*8. Painter 插件適配 (新增)  */ 
+.markdown-rendered mark.hltr-r {
+    background-color: transparent !important;
+    color: var(--highlight-2) !important;
+    font-weight: 600 !important;
+    border-bottom: 1px dotted var(--highlight-2) !important;
+}
+
+.markdown-rendered mark.hltr-g {
+    background-color: transparent !important;
+    color: var(--highlight-1) !important;
+    font-weight: 600 !important;
+    border-bottom: 1px dotted var(--highlight-1) !important;
 }
